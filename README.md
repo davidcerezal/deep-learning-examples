@@ -9,3 +9,11 @@ https://www.manning.com/books/deep-learning-with-python
 https://github.com/gw0/docker-keras
 
 http://gw.tnode.com/docker/keras/
+
+3.- Once you have installed keras and downloaded the image, you can run:
+docker run -it gw000/keras:(???your_version???) python3
+
+and run:
+import keras
+
+if the shells promtps "Using TensorFlow backend." or "Using Theano..." everything is ok.
