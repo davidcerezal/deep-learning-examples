@@ -6,4 +6,5 @@ https://www.manning.com/books/deep-learning-with-python
 
 2.- For quick start with the enviroment, We choose a docker container with the lightest version of Keras and tensorFlow.
 https://github.com/gw0/docker-keras
+
 http://gw.tnode.com/docker/keras/
