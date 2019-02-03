@@ -1,0 +1,60 @@
+dcerezal$ docker pull gw000/keras:2.1.4-py3
+
+
+:~ dcerezal$ docker images
+REPOSITORY          TAG       IMAGE ID            CREATED SIZE
+gw000/keras         2.1.4-py3 24f176f13436        7 months ago 927MB
+
+
+docker run -it --rm -v $(pwd):/srv gw000/keras:2.1.4-py3 bash
+
+
+root@baff3ed84d6b:/srv#
+
+
+~ dcerezal$ docker run -it --rm -v $(pwd):/srv gw000/keras:2.1.4-py3 bash
+root@baff3ed84d6b:/srv# python3
+Python 3.5.3…..
+>>> import keras
+Using TensorFlow backend.
+
+
+sudo apt-get install python-pip
+pip3 install matlibplot
+
+
+MacBook-Air-de-David:~ dcerezal$ docker ps
+CONTAINER ID        IMAGE  COMMAND CREATED             STATUS PORTS NAMES
+65b3e16edbb7        cerezal77/keras:0.2  "bash" 5 seconds ago       Up 4 seconds hardcore_swanson
+
+
+docker commit 65b3e16edbb7 cerezal77/keras:0.1
+
+
+MacBook-Air-de-David:~ dcerezal$ docker images
+REPOSITORY          TAG IMAGE ID            CREATED SIZE
+cerezal77/keras     0.1 1d3b5958addd        6 days ago 1.02GB
+gw000/keras         2.1.4-py3 24f176f13436        7 months ago 927MB
+
+
+docker push cerezal77/keras:0.2
+
+
+docker rm $(docker ps -a -q)
+MacBook-Air-de-David:~ dcerezal$ docker ps
+CONTAINER ID        IMAGE COMMAND             CREATED STATUS PORTS               NAMES
+
+docker rmi $(docker images -q)
+MacBook-Air-de-David:~ dcerezal$ docker images
+REPOSITORY          TAG IMAGE ID            CREATED SIZE
+
+
+
+docker pull cerezal77/keras:0.1
+MacBook-Air-de-David:~ dcerezal$ docker run -it --rm -v $(pwd):/srv cerezal77/keras:0.2 python3
+Python 3.5.3 (default, Jan 19 2017, 14:11:04)
+[GCC 6.3.0 20170118] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import keras
+Using TensorFlow backend.
+>>> import matplotlib
